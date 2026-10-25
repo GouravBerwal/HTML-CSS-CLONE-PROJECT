@@ -17,7 +17,7 @@ jobs:
           git config --global user.name "AapkaUsername"
           
           # 2. JO DATE GREEN KARNI HAI, USE NEECHE BADLEIN (Format: YYYY-MM-DD)
-          TARGET_DATE="2026-10-20T12:00:00"
+          TARGET_DATE="2026-10-23T02:00:00"
           
           export GIT_AUTHOR_DATE="$TARGET_DATE"
           export GIT_COMMITTER_DATE="$TARGET_DATE"
