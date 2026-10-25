@@ -1,28 +1,26 @@
 name: Manual Past Date Commit
 
 on:
-  workflow_dispatch: # Isse GitHub website par ek 'Run' ka button aa jayega
+  workflow_dispatch:
 
 jobs:
   make-commit:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2 # Yahan v4.2.2 karne se warning hat jayegi
 
       - name: Make Past Date Commit
         run: |
-          # 1. Apni details set karein (GitHub Email aur Name dalein)
-          git config --global user.email "aapka-email@example.com"
-          git config --global user.name "AapkaUsername"
+          git config --global user.email "gouravberwal003@gmail.com"
+          git config --global user.name "GouravBerwal"
           
-          # 2. JO DATE GREEN KARNI HAI, USE NEECHE BADLEIN (Format: YYYY-MM-DD)
-          TARGET_DATE="2026-10-23T02:00:00"
+          # Jis date ko green karna hai, use badlein
+          TARGET_DATE="2026-10-20T12:00:00"
           
           export GIT_AUTHOR_DATE="$TARGET_DATE"
           export GIT_COMMITTER_DATE="$TARGET_DATE"
           
-          # 3. Ek badlav karke commit karna
           echo "Streak fixed for $TARGET_DATE" >> streak_log.txt
           git add streak_log.txt
           git commit -m "Streak fixed for $TARGET_DATE"
