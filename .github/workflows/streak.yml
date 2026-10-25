@@ -16,7 +16,7 @@ jobs:
           git config --global user.name "GouravBerwal"
           
           # Jis date ko green karna hai, use badlein
-          TARGET_DATE="2026-10-20T12:00:00"
+          TARGET_DATE="2026-10-19T12:00:00"
           
           export GIT_AUTHOR_DATE="$TARGET_DATE"
           export GIT_COMMITTER_DATE="$TARGET_DATE"
